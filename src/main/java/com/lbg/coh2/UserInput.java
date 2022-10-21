@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class UserInput {
 	
-	private Scanner sc = new Scanner(System.in);
+	private Scanner sc;
 	
 	// constructor
 	public UserInput()
 	{
+		this.sc = new Scanner(System.in);
 	}
 	
 	// destructor - close scanner
