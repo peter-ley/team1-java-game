@@ -10,6 +10,17 @@ public class App
     {
         Game game = new Game(20);
         
-        Runner runner = new Runner();
+    	UserInput userInput = new UserInput();	
+    	boolean runGame = true;
+    	
+    	Coordinate moveBy = new Coordinate(0,0);
+    	
+    	while(runGame)
+    	{
+    		runGame = game.updateGame();
+    		moveBy = userInput.getDirection();
+    		
+    	}
+
     }
 }
