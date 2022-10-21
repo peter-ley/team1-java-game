@@ -11,6 +11,13 @@ public class UserInput {
 	{
 	}
 	
+	// destructor - close scanner
+	public void close()
+	{
+		this.sc.close();
+	}
+	
+	
 	// method for reading in a string
 	public String readString()
 	{
