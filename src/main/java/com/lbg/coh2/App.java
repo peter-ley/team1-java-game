@@ -1,9 +1,5 @@
 package com.lbg.coh2;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -17,10 +13,12 @@ public class App
     	
     	while(runGame)
     	{
-    		runGame = game.updateGame();
+    		runGame = game.updateGame(moveBy);
+    		if (runGame == false)
+    			break;
     		moveBy = userInput.getDirection();
-    		
     	}
-
+    	
+    	userInput.close();
     }
 }

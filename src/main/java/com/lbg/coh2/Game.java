@@ -75,8 +75,8 @@ public class Game
 	}
 	
 	public void userPrompt(double distance) {
-		System.out.println("You're approximately " + distance + " metres from the treasure!");
-		System.out.println("Enter the direction in which you'd like to travel: ");
+		System.out.println("\nYou're approximately " + String.format("%.2f", distance) + " metres from the treasure!");
+		System.out.print("Enter the direction in which you'd like to travel: ");
 	}
 	
 	public void updatePlayerPosition(Coordinate moveBy) {
@@ -84,7 +84,7 @@ public class Game
 		int y = player.getY() + moveBy.getY();
 		
 		if (x > getBoardDimensions() || x < 0 || y > getBoardDimensions() || y < 0) {
-			System.out.println("You are at the edge of the map. Try again.");
+			System.out.println("\n--- You are at the edge of the map. Try again. ---");
 		}
 		else {
 			setPlayer(new Coordinate(x,y));
@@ -101,7 +101,7 @@ public class Game
 		updatePlayerPosition(moveBy);
 		double distance = findDistance();
 		if (distance == 0) {
-			System.out.println("Congratulations! You've found the treasure.");
+			System.out.println("\n --- Congratulations! You've found the treasure. ---");
 			return false;
 		}
 		else {
